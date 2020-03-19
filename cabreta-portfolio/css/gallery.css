@@ -19,26 +19,54 @@ h1 {
     display: none;
 }
 
+/* BUTTON */
+
+#boutonContainer{
+    padding-top: 95px;
+    padding-bottom: 25px;
+}
+
+.btn-sort {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .btn-sort:hover {
+    background-color: #ddd;
+  }
+  
+  /* Add a dark background color to the active button */
+  .btn-sort.active {
+    background-color: #666;
+     color: white;
+  }
+
+/* GALLERY */
+
 .gallery {
-    padding-top: 87px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: min-content;
+    grid-gap: 15px;
 }
 
 .gallery div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
     position: relative;
 }
 
 .gallery img {
-    width: 95%;
+    width: 100%;
     height: 100%;
-    margin: 10px 0px 10px 0px;
+    object-fit: cover;
+    /* height: 100%; */
+    /* margin: 10px 0px 10px 0px; */
 }
 
 .gallery a {
@@ -75,6 +103,7 @@ h1 {
     transform: scale(1.1);
     opacity: 0.5;
     transition-duration: 1s;
+
 }
 
 .gallery div:hover p {
@@ -85,6 +114,16 @@ h1 {
 
 .gallery div p:hover {
     cursor: url(../images/Gallery/goatlogo4_mini-carre.jpg), auto;
+}
+
+#sport{
+    display: none;
+}
+#cooking{
+    display: none;
+}
+#technology{
+    display: none;
 }
 
 /* Mobile */
