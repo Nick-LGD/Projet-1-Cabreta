@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <img src="images/logo/CabretaLogoBlack1.png" alt="Logo Cabretta">
+        <img id="logo" src="images/logo/CabretaLogoBlack1.png" alt="Logo Cabretta">
         <div class="container">
             <nav class="top-menu">
                 <ul class="menu">
@@ -20,12 +20,21 @@
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li id="darkMode"><a>Dark mode</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <!-- GALLERY -->
     <h1>Gallery</h1>
+    
+    <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('nature')"> Nature</button>
+        <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+        <button class="btn" onclick="filterSelection('people')"> People</button>
+    </div>
+
     <section class="gallery">
         <div>
             <img src="images/Gallery/vie-1.jpeg" alt="People inside metro">
@@ -94,5 +103,6 @@
        <p>Webstudio BAGJAV © 2020 All rights reserved</p>
     </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

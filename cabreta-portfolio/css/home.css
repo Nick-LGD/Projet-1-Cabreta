@@ -67,6 +67,7 @@ div#slider figure {
     justify-content: space-evenly;
     width: 77%;
     margin: auto;
+    color: var(--color-citations);
 }
 
 blockquote {

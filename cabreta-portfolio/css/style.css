@@ -13,7 +13,6 @@ body {
 nav {
     margin: 50px auto;
     max-width: 700px;
-    background-color: rgb(255, 255, 255);
     border-color: rgb(255, 255, 255);
 }
 
@@ -25,7 +24,8 @@ nav {
 }
 
 .menu li a {
-    color: black;
+    /* color: black; */
+    color: var(--color-nav);
     text-align: right;
     padding: 14px 16px;
     text-decoration: none;
@@ -36,6 +36,7 @@ nav {
 nav li a:hover {
     background-color: #111;
     color: white;
+    cursor: pointer;
 }
 
 header {
@@ -43,8 +44,8 @@ header {
     justify-content: space-around;
     align-items: center;
     height: 10%;
-    border-bottom: 2px solid black;
-    background-color: #fff;
+    border-bottom: var(--border-header);
+    background-color: var(--background-header);
     position: fixed;
     z-index: 1;
     top: 0;
@@ -94,7 +95,7 @@ header {
     margin-top: 80px;
     padding-top: 30px;
     padding-bottom: 20px;
-    border-top: 2px solid black;
+    border-top: var(--border-footer);
 }
 
 footer a {
@@ -172,3 +173,31 @@ nav a[href="index.html"] {
     background-color: #000;
     color: #fff;
 }
+
+/* DARK MODE */
+:root {
+    --background-color: white;
+    --text-color: black;
+    --color-citations: black;
+    --background-header: white;
+    --color-nav:black;
+    --border-header: 2px solid black;
+    --border-footer: 2px solid black;
+    /* to read: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+  }
+
+[data-theme="dark"] {
+    --background-color: black;
+    --text-color: white;
+    --color-citations: black;
+    --background-header: black;
+    --color-nav :white;
+    --border-header: 2px solid white;
+    --border-footer: 2px solid white;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+

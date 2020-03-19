@@ -42,8 +42,6 @@ border-radius: 2%;
     width: 50%;
 }
 
-
-
 input::placeholder {
     letter-spacing: 2px;
 }
@@ -98,7 +96,7 @@ textarea::placeholder{
     font-size: 15px;
     font-family: 'Orbitron', sans-serif;
     letter-spacing: 4px;
-   
+    color: #000;
 }
 
 .span-contact {
@@ -107,6 +105,7 @@ textarea::placeholder{
     font-size: 60px;
     text-align: center;
     margin: 5px;
+    color: #000;
     
 }
 
