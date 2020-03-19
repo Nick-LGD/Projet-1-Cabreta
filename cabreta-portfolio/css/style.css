@@ -47,7 +47,7 @@ header {
     border-bottom: var(--border-header);
     background-color: var(--background-header);
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     top: 0;
     width: 95%;
     overflow: hidden;

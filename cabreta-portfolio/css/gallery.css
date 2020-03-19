@@ -19,6 +19,48 @@ h1 {
     display: none;
 }
 
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 300; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+.modal-content {
+background-color: #fefefe;
+margin: auto;
+padding: 20px;
+border: 1px solid #888;
+width: 80%;
+}
+
+.close {
+color: #aaaaaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+
+#imageInModal{
+    width: 100%;
+    margin-top:30px;
+}
+
 /* BUTTON */
 
 #boutonContainer{
@@ -34,16 +76,14 @@ h1 {
     cursor: pointer;
   }
   
-  /* Add a grey background color on mouse-over */
-  .btn-sort:hover {
-    background-color: #ddd;
-  }
-  
-  /* Add a dark background color to the active button */
-  .btn-sort.active {
-    background-color: #666;
-     color: white;
-  }
+.btn-sort:hover {
+background-color: #ddd;
+}
+
+.btn-sort.active {
+background-color: #666;
+    color: white;
+}
 
 /* GALLERY */
 
@@ -96,13 +136,15 @@ h1 {
     text-transform: uppercase;
     border-radius: 5px;
     font-family: "Orbitron", cursive;
+    z-index: 2;
 }
 
 .gallery img:hover {
     cursor: url(../images/Gallery/goatlogo4_mini-carre.jpg), auto;
     transform: scale(1.1);
-    opacity: 0.5;
+    opacity: 1;
     transition-duration: 1s;
+    z-index: 1;
 
 }
 

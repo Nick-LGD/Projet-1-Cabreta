@@ -23,8 +23,7 @@ rootElt.setAttribute('data-theme', sessionStorage.getItem("colorMod"));
 logoCabreta.src = sessionStorage.getItem("logo");
 
 // SORT PICTURES
-// const btnSort = document.getElementsByClassName('btn');
-// console.log(btnSort);
+const sortBtn = document.getElementById("boutonContainer");
 
 const showAll = document.getElementById("showAll");
 const sport = document.getElementById("sport");
@@ -43,30 +42,48 @@ function filterSelection(filter){
     resetSort();
     switch (filter) {
         case 'all':
-            console.log('showall')
             showAll.style.display = 'grid';
             break;
         case 'sport':
-            console.log('sport')
             sport.style.display = 'grid';
             break;
         case 'cooking':
-            console.log('cooking')
             cooking.style.display = 'grid';
             break;
         case 'technology':
-            console.log('technology')
             technology.style.display = 'grid';
             break;
         default:
             break;
     }
 }
-let gallery = document.getElementById("showAll");
-// console.log(gallery);
 
-// for(let i = 0; i < gallery.length; i++ ){
-//     console.log(gallery[i].children[0]);
-//     gallery[i].children[0].style.borderRadius = "60px";
-// }
-// console.log(document.getElementById("showAll").children[0].children[0])
+sortBtn.addEventListener('click', function(e){
+    let currentActive = document.querySelector(".active");
+    currentActive.classList.remove("active");
+    if(e.target != undefined)
+        e.target.classList.add("active");
+})
+
+// MODAL
+const modal = document.getElementById("modalImg");
+const span = document.getElementsByClassName("close")[0];
+const imgInModal = document.getElementById("imageInModal");
+
+sport.addEventListener('click', function(e){
+    console.log(e.target.src);
+    if(e.target.src != undefined){
+        modal.style.display = "block";
+        imgInModal.src = e.target.src;
+    }
+});
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
